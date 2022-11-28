@@ -147,7 +147,7 @@ async function run(){
             }
             res.status(403).send({accessToken: ''})
         });
-
+        // users data
         app.get('/users', async(req, res) =>{
             const query = {};
             const users = await usersCollection.find(query).toArray();
