@@ -135,7 +135,7 @@ async function run(){
                 res.send(result);
             })
 
-
+         // create jwt 
         app.get('/jwt', async(req, res) =>{
             const email = req.query.email;
             
