@@ -206,7 +206,7 @@ async function run(){
             res.send(result);
         });
         
-
+       
         app.get('/products', verifyJWT, async(req, res) =>{
             const query = {};
              const products = await productsCollection.find(query).toArray();
@@ -218,7 +218,7 @@ async function run(){
             const result = await productsCollection.insertOne(product);
             res.send(result);
         });
-
+        // product delete
         app.delete('/products/:id',verifyJWT,  async(req, res) => {
             const id = req.params.id;
             const filter = {_id: ObjectId(id)};
