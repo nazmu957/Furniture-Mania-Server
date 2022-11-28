@@ -57,7 +57,7 @@ async function run(){
             }
             next();
         }
-
+       // get categories
         app.get('/categories', async(req, res) =>{
             const query = {}
             const cursor = categoryCollection.find(query);
