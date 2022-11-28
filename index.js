@@ -46,7 +46,7 @@ async function run(){
         const productsCollection = client.db('usedFurniture').collection('products');
         const paymentsCollection = client.db('doctorsPortal').collection('payments');
 
-
+        // admin verify
         const verifyAdmin = async (req, res, next) =>{
             const decodedEmail = req.decoded.email;
             const query = { email: decodedEmail };
