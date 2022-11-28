@@ -70,7 +70,7 @@ async function run(){
             const category = await categoryCollection.findOne(query);
             res.send(category);
         });
-
+        // get booking id
         app.get('/bookings/:id', async (req, res) =>{
             const id = req.params.id;
             const query = {_id: ObjectId(id)};
